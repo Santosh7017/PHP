@@ -27,6 +27,23 @@ $str = " Hello brilliant students ";
 
 // echo ucfirst("hello");
 // echo strrev("hello  world");
+
+//echo lcfirst ("HWLLO");
+//echo ucfirst ("hWLLO");
+//echo ucwords("hello world");
+//echo strrev("Hello world");
+//echo ltrim("Hello world","H");
+//echo rtrim("Hello world","d");
+//echo trim("Hello world", "He"); 
+
+//echo strpos("hello","o");
+//echo str_replace("e","o","Hello") 
+
+//echo strcmp("Hello"," hello");
+//echo strcasecmp("hllo","Hello");
+//echo stripos("Hello","o");
+
+
 echo strchr("hello world", "l");
 
 
