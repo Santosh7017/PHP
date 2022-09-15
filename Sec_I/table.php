@@ -1,6 +1,7 @@
 <?php
-
+echo "<table style='border:2px solid red;border-collapse:collapse'>";
 for($row = 0;$row<10;$row++){
+    echo "<tr>";
     for($column = 0;$column<10;$column++){
         echo $row.$column. " ";
     }
@@ -9,4 +10,31 @@ for($row = 0;$row<10;$row++){
 
 // echo "Hello world";
 
+echo "<table style = 'border:2px solid red; border-collapse: collapse'>";
+for($row = 1;$row <= 8;$row++){
+    echo "<tr>";
+    for($column = 1; $column <= 8;$column++){
+        if(($column)%2 == 0){
+            
+        echo "<td style = 'background:black; height:100px; width:100px'>"."</td>" ;
+    }else{
+        echo "<td style = 'background:white; height:100px; width:100px'>"."</td>" ;
+    }
+    }
+    echo "</tr>";
+}
+echo "</table>"
+
+
+
+// echo "<table style = 'border:2px solid red; border-collapse: collapse'>";
+// for($row = 2;$row <= 10;$row++){
+//     echo "<tr>";
+//     for($column = 1; $column <= 10;$column++){
+        
+//         echo "<td style = 'border:2px solid blue; '>"."$row * $column = ".$row * $column."</td>" ;
+//     }
+//     echo "</tr>";
+// }
+// echo "</table>"
 ?>
