@@ -28,21 +28,22 @@
 //         echo "<td style = 'border:2px solid black'>".$counter."</td>";
 //         $counter++;
 //     }
+//     echo "</tr>";
 
 // }
 // echo "</table>";
 
 // echo "Hello world";
 
-// echo "<table style = 'border:2px solid red; border-collapse: collapse'>";
+// echo "<table  style = 'border:2px solid black; border-collapse: collapse;' align='center' >" ;
 // for($row = 1;$row <= 8;$row++){
 //     echo "<tr>";
 //     for($column = 1; $column <= 8;$column++){
 //         if(($row + $column)%2 == 0){
             
-//         echo "<td style = 'background:black; height:100px; width:100px'>"."</td>" ;
+//         echo "<td style = 'background:black; height:80px; width:80px;'>"."</td>" ;
 //     }else{
-//         echo "<td style = 'background:white; height:100px; width:100px'>"."</td>" ;
+//         echo "<td style = 'background:white; height:80px; width:80px; '>"."</td>" ;
 //     }
 //     }
 //     echo "</tr>";
@@ -77,4 +78,19 @@
 //     echo "</tr>";
 // }
 // echo "</table>"
+
+// $counter = 0;
+// echo "<table style ='border-collapse:collapse'>";
+// for($row = 1;$row<10;$row++){
+//     echo "<tr>";
+//     for($column = 0;$column < $row;$column++){
+//         echo "<td style = 'border:2px solid black'>".$counter."</td>";
+//         $counter++;
+//     }
+//     echo "</tr>";
+   
+    
+// }
+// echo "</table>";
+
 ?>
