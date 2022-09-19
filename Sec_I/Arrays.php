@@ -1,6 +1,6 @@
 <?php
 // indexed array
-// $arr = [10,34,234,3984];
+$arr = [10,34,234,3984];
 // $arr_2 = array(123,234,3);
 // print_r($arr);
 
@@ -46,7 +46,9 @@
 
 // sort($arr);
 // print_r($arr);
-// asort($arr);
+asort($arr);
+
+print_r($arr);
 //  $data_one = [2,3,4,5,8,9,92,65];
 //  $new_data = range(min($data_one),max($data_one));
 //  print_r(array_diff($new_data,$data_one));
@@ -64,20 +66,20 @@
 // }
 // echo "</table>"
 
-echo "<table style = 'border:2px solid red; border-collapse: collapse'>";
-for($row = 1;$row <= 8;$row++){
-    echo "<tr>";
-    for($column = 1; $column <= 8;$column++){
-        if(($column)%2 == 0){
+// echo "<table style = 'border:2px solid red; border-collapse: collapse'>";
+// for($row = 1;$row <= 8;$row++){
+//     echo "<tr>";
+//     for($column = 1; $column <= 8;$column++){
+//         if(($column)%2 == 0){
             
-        echo "<td style = 'background:black; height:100px; width:100px'>"."</td>" ;
-    }else{
-        echo "<td style = 'background:white; height:100px; width:100px'>"."</td>" ;
-    }
-    }
-    echo "</tr>";
-}
-echo "</table>"
+//         echo "<td style = 'background:black; height:100px; width:100px'>"."</td>" ;
+//     }else{
+//         echo "<td style = 'background:white; height:100px; width:100px'>"."</td>" ;
+//     }
+//     }
+//     echo "</tr>";
+// }
+// echo "</table>"
 
 
 
