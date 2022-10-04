@@ -1,0 +1,44 @@
+
+<!--  two controls  are used 
+    label
+    input 
+
+
+    two main attributes
+    action 
+    method
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="add.php" method="post" >
+        <table>
+        <tr>
+            <td> 
+                <label > Enter First Number: </label>
+            </td>
+            <td> <input type="number" name = "num_one"> </td>
+        </tr>
+
+        <tr>
+            <td><label > Enter second Number: </label></td>
+            <td> <input type="number" name="num_two" ></td>
+        </tr>
+        <tr><td> <input type="submit" name="add" value= "addition" ></td> </tr>
+        <tr><td> <input type="submit" name="sub" value= "subtract" ></td> </tr>
+        <tr><td> <input type="submit" name="div" value= "divide" ></td> </tr>
+        <tr><td> <input type="submit" name="mul" value= "multiply" ></td> </tr>
+    </table>
+    </form>
+
+    <!-- <form action="add.php" method="post">
+        <input type="text" name="split">
+    </form> -->
+</body>
+</html>
