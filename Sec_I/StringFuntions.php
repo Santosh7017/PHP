@@ -32,7 +32,7 @@ $str = " Hello brilliant students ";
 //echo ucfirst ("hWLLO");
 //echo ucwords("hello world");
 //echo strrev("Hello world");
-//echo ltrim("Hello world","H");
+//echo ltrim("Hello world","H");/                 
 //echo rtrim("Hello world","d");
 //echo trim("Hello world", "He"); 
 
