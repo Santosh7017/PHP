@@ -64,8 +64,8 @@
 // 	 $sql="insert into validname(uname,email,passwordd) values ('$name','$em','$passwr')";
 // 	if(mysqli_query($con, $sql))
 // 	{
-// 		//echo "record inserted succefully";
-// 		//header("refresh:5,url=secm.html");
+// 		echo "record inserted succefully";
+// 		header("refresh:5,url=secm.html");
 // 		header("location:secm.html");
 // 	}
 // }
@@ -134,17 +134,33 @@
 // }
 
 
-$servername = "Localhost";
-$username = "root";
-$password = "";
-$database= "sec_i";
+// $servername = "Localhost";
+// $username = "root";
+// $password = "";
+// $database= "sec_i";
 
 
-$connection = mysqli_connect($servername,$username,$password,$database);
-if(!$connection){
-  die("Connection failed: ".mysqli_connect_error());
-}
-echo "connection succesfull";
+// $connection = mysqli_connect($servername,$username,$password,$database);
+// if(!$connection){
+//   die("Connection failed: ".mysqli_connect_error());
+// }
+// echo "connection succesfull";
+
+if ( isset($_POST['delete']) && isset($_POST['user_id']) ) {
+
+  $sql = "DELETE FROM users WHERE user_id = :zip";
+  
+  $stmt = $pdo->prepare($sql);
+  
+  $stmt->execute(array(':zip' => $_POST['user_id']));
+  
+  $_SESSION['success'] = 'Record deleted';
+  
+  header( 'Location: index.php' ) ;
+  
+  return;
+  
+  }
 
 
    ?>
