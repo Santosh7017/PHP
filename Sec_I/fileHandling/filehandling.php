@@ -24,4 +24,5 @@ while(!feof($var)){
 echo $_SERVER("sec-i");
 
 
+
 ?>
