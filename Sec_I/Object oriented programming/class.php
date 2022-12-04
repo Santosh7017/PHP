@@ -40,7 +40,7 @@ class base{
         echo "end"."<br>";
     }
 }
-$obj_one = new base();
+
 $obj_one-> display();
 $obj_two = new base;
 echo $obj_two -> data."<br>";

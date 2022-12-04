@@ -3,8 +3,8 @@
 // $var = fopen("add.php","w");
 // fwrite($var, "hello");
 
-// $var = fopen("sec-i","w");
-// fwrite($var, "hello /n class");
+$var = fopen("sec-i","w");
+fwrite($var, "hello /n class");
 
 // $open = fopen("sec-i","r");
 // $size = filesize("sec-i")  // return value in bytes
