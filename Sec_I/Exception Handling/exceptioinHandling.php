@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
     // }catch(Exception $eg){
     }catch(DivisionByzeroo $eg){
-        echo $eg -> getMessage();
+        echo $eg -> x();
     }
 }
 

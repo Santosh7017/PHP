@@ -1,5 +1,5 @@
 <?php
-setcookie("name", "bhaag bhootnike aandhi aai", time()+60);
+setcookie("name", time()+60);
 if($_COOKIE['name'])
 {
     echo("cookie hai apne paas ". $_COOKIE['name']);

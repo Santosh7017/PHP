@@ -11,6 +11,7 @@
     }
     }
     
+    
    
 if(isset($_POST['display'])){
     $display = "SELECT * FROM mylab";
@@ -20,6 +21,7 @@ if(isset($_POST['display'])){
           echo "username: ". $row['username']." ||" . "   Email: ". $row['email']. "<br  >";
           }
     }else{
+    
         echo "Table is empty";
     }
 }

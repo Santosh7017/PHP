@@ -14,8 +14,6 @@ $class = new gla();
 $obj = new ReflectionMethod('gla','task');
 $obj->setAccessible(true);
 $obj->invoke(new gla);
-
-
 $newobj = new ReflectionProperty('gla','task');
 $newobj->setAccessible(true);
 $newobj-> getValue(new gla);
