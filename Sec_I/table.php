@@ -82,7 +82,7 @@ echo "</table>";
 
 $counter = 0;
 // echo "<table style ='border-collapse:collapse'>";
-echo "<table>";
+echo "<table style = 'border-collapse: collapse'>";
 for($row = 1;$row<10;$row++){
     echo "<tr>";
     for($column = 0;$column < $row;$column++){

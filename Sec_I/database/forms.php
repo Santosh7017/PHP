@@ -1,19 +1,19 @@
 <?php
-// $servername = "localhost";
-// $username = "root";
-// $password = "";
-// $database="sec_i";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database="sec_i";
 
 
 // Create connection
-// $connection_details = mysqli_connect($servername, $username, $password,$database);
+$connection_details = mysqli_connect($servername, $username, $password,$database);
 
 //  Check connection
-// if (!$connection_details) {
-//   die("Connection failed: " . mysqli_connect_error());
-// }
-// echo "Connected successfully";
-
+if (!$connection_details) {
+  die("Connection failed: " . mysqli_connect_error());
+}else{
+echo "Connected successfully";
+}
 // $id=$_POST['id'];
 // $username=$_POST['uname'];
 // $contact=$_POST['contact'];
@@ -22,30 +22,32 @@
 // $connection_details=mysqli_connect("localhost","root","","database");
 
 
+// insert
+if(isset($_POST ['save'])){
+$sql="INSERT   into forms(uname,contact,email,id) VALUES ('$username','$contact','$email','$id')";
+ if(mysqli_query($connection_details,$sql))
+ {
+  echo "<script>alert('new record inserted')</script>";
+  header("location:forms.html");
+  // header("refresh:5, url= secm.html");
+ }
+}
 
-// if(isset($_POST ['save'])){
-// $sql="INSERT   into forms(uname,contact,email,id) VALUES ('$username','$contact','$email','$id')";
-//  if(mysqli_query($connection_details,$sql))
-//  {
-//   echo "<script>alert('new record inserted')</script>";
-//   header("location:forms.html");
-//   // header("refresh:5, url= secm.html");
-//  }
-// }
-//  if(isset($_POST['display']))
-// {
-//     $display_query="SELECT * FROM forms ";
-//     $result = mysqli_query($connection_details, $display_query);
+// print
+ if(isset($_POST['display']))
+{
+    $display_query="SELECT * FROM forms ";
+    $result = mysqli_query($connection_details, $display_query);
 
-//     if (mysqli_num_rows($result) > 0) {
+    if (mysqli_num_rows($result) > 0) {
      
-//       while($row = mysqli_fetch_assoc($result)) {
-//         echo "id: " . $row["id"]. " - Name: " . $row["uname"]. " " . $row["contact"]." ". $row["email"]. " "."<br>";
-//       }
-//     } else {
-//       echo "0 results";
-//     }
-//   }
+      while($row = mysqli_fetch_assoc($result)) {
+        echo . $row["id"]. "  Name: " . $row["uname"]. " " . $row["contact"]." ". $row["email"]. " "."<br>";
+      }
+    } else {
+      echo "0 results";
+    }
+  }
     
 //     mysqli_close($connection_details);
 
@@ -109,29 +111,27 @@
 // } 
 // echo "</table>";
 // }
-// if(isset($_POST['update']))
-// {
-// 	$con = mysqli_connect('localhost','root','','sectionm');  
-// ​
-    
-//   if(!$con)  
-//   {  
-//       echo 'not connect to the server';  
-//   } 
-//  $name = $_POST['username'];
-//  $eid = $_POST['id'];
-// ​
-//   $sql="UPDATE validname SET uname='$name' WHERE id='$eid'";
-//   if(mysqli_query($con,$sql))
-//   {
-//   	echo "updated";
-//   }
-// }
-// ​
-// if(isset($_POST['delete']))
-// {
-// 	echo "delete click";
-// }
+
+
+// update-------------------------------------------------------------------------
+if(isset($_POST['update']))
+
+  $sql="UPDATE validname SET uname='$name'WHERE id='$eid'";
+  if(mysqli_query($con,$sql))
+  {
+  	echo "updated";
+  }
+
+// delete
+if(isset($_POST['delete']))
+{
+	$delete = "DELETE FROM myTable";
+  if(mysqli_query($con,$delet)){
+    echo "Data deleted from table succesfully";
+  }else{
+    echo "data can not be deleted";
+  }
+}
 
 
 // $servername = "Localhost";
@@ -140,27 +140,6 @@
 // $database= "sec_i";
 
 
-// $connection = mysqli_connect($servername,$username,$password,$database);
-// if(!$connection){
-//   die("Connection failed: ".mysqli_connect_error());
-// }
-// echo "connection succesfull";
-
-if ( isset($_POST['delete']) && isset($_POST['user_id']) ) {
-
-  $sql = "DELETE FROM users WHERE user_id = :zip";
-  
-  $stmt = $pdo->prepare($sql);
-  
-  $stmt->execute(array(':zip' => $_POST['user_id']));
-  
-  $_SESSION['success'] = 'Record deleted';
-  
-  header( 'Location: index.php' ) ;
-  
-  return;
-  
-  }
-
+ 
 
    ?>

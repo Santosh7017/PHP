@@ -23,8 +23,23 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
     // }catch(Exception $eg){
     }catch(DivisionByzeroo $eg){
-        echo $eg -> x();
+        echo $eg -> errorMessage();
     }
+
+try{
+
+if($den<=0){
+
+throw new Exception("enter no. greator than 0");
+}
+else{
+    echo $num/$den;
+}
+echo $num/$den;
+}catch(Exception $e){
+    echo $e-> getMessage(); 
+}
+
 }
 
 

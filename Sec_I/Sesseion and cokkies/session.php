@@ -4,7 +4,7 @@
 ?>
 <?php
 
-setcookie("hello",getenv('REMOTE_ADDR'),time()+40);
+setcookie("hello",getenv('REMOTE_ADDR'),"Hello world",time()+40);
 if(isset($_COOKIE['hello']))
 {
     echo $_COOKIE['hello'];

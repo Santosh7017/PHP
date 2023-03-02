@@ -28,17 +28,24 @@
 // $stu2_gla -> admission= "coming soon";
 // echo $stu_gla -> admission."<br>";
 
-class base{
-    public $dta = "sets";
-    public function __construct(){
-        $this->data = 'unset';
-    }
-    public function display(){
-        $this->data = 'new';
-    }
-    public function __destruct(){
-        echo "end"."<br>";
-    }
-}
+// class base{
+//     public $dta = "sets";
+//     public function __construct(){
+//         $this->data = 'unset';
+//     }
+//     public function display(){
+//         $this->data = 'new';
+//     }
+//     public function __destruct(){
+//         echo "end"."<br>";
+//     }
+// }
+
+// $obj_one-> display();
+// $obj_two = new base;
+// echo $obj_two -> data."<br>";
+// echo $obj_one-> data."<br>"; 
+
+
 
 ?>
