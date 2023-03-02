@@ -41,8 +41,4 @@ class base{
     }
 }
 
-$obj_one-> display();
-$obj_two = new base;
-echo $obj_two -> data."<br>";
-echo $obj_one-> data."<br>"; 
 ?>
